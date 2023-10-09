@@ -1,16 +1,13 @@
 #include <stdio.h>
-#include <string.h>
 
 void main(int argc, char **argv){
     int input = atoi(argv[1]);  
     char* file_name = argv[2];
-    char *output_file_name = (char *)malloc(strlen("encrypted_") + strlen(file_name) + 1);
-    strcpy(output_file_name, "encrypted_");
+    char *output_file_name = (char *)malloc(strlen("decrypted_") + strlen(file_name) + 1);
+    strcpy(output_file_name, "decrypted_");
     strcat(output_file_name, file_name);
 
-
-    // encrypt the contents of text.txt file with xor operation
-    printf("Encryptning...");
+    printf("Decryptning...");
     FILE *fp1 = fopen(file_name, "r");
     FILE *fp2 = fopen(output_file_name, "w");
     char ch1;
